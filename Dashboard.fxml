@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="productinventorysystem1.DashboardController"
+            prefWidth="600" prefHeight="400"
+            style="-fx-background-color: linear-gradient(to right, #667eea, #764ba2);">
+    <children>
+        <VBox alignment="CENTER" spacing="25" 
+              AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0"
+              style="-fx-padding: 30 40 30 40; -fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 20;">
+            
+            <Label text="Product Inventory System"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 3, 0, 1, 1);"/>
+            
+            <Button fx:id="productBtn" text="📦 Manage Products"
+                    prefWidth="250" prefHeight="45"
+                    onAction="#handleProductBtn"
+                    style="-fx-background-color: linear-gradient(to right, #43cea2, #185a9d);
+                           -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px;
+                           -fx-background-radius: 25; -fx-cursor: hand;"
+                    >
+                <VBox.margin>
+                    <Insets bottom="5"/>
+                </VBox.margin>
+                <style>
+                    .button:hover {
+                        -fx-background-color: linear-gradient(to right, #185a9d, #43cea2);
+                        -fx-effect: dropshadow(gaussian, rgba(0, 204, 255, 0.7), 8, 0, 0, 0);
+                    }
+                </style>
+            </Button>
+            
+            <Button fx:id="customerBtn" text="🛒 Customer View (View Products)"
+                    prefWidth="250" prefHeight="45"
+                    onAction="#handleCustomerBtn"
+                    style="-fx-background-color: linear-gradient(to right, #f7971e, #ffd200);
+                           -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px;
+                           -fx-background-radius: 25; -fx-cursor: hand;"
+                    >
+                <VBox.margin>
+                    <Insets bottom="5"/>
+                </VBox.margin>
+                <style>
+                    .button:hover {
+                        -fx-background-color: linear-gradient(to right, #ffd200, #f7971e);
+                        -fx-effect: dropshadow(gaussian, rgba(255, 204, 0, 0.7), 8, 0, 0, 0);
+                    }
+                </style>
+            </Button>
+            
+            <Button fx:id="logoutBtn" text="🚪 Logout"
+                    prefWidth="250" prefHeight="45"
+                    onAction="#handleLogout"
+                    style="-fx-background-color: linear-gradient(to right, #ff416c, #ff4b2b);
+                           -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px;
+                           -fx-background-radius: 25; -fx-cursor: hand;"
+                    >
+                <VBox.margin>
+                    <Insets bottom="5"/>
+                </VBox.margin>
+                <style>
+                    .button:hover {
+                        -fx-background-color: linear-gradient(to right, #ff4b2b, #ff416c);
+                        -fx-effect: dropshadow(gaussian, rgba(255, 75, 43, 0.7), 8, 0, 0, 0);
+                    }
+                </style>
+            </Button>
+            
+        </VBox>
+    </children>
+</AnchorPane>

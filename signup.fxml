@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="productinventorysystem1.SignupController"
+            prefWidth="450" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #6a11cb, #2575fc);">
+
+    <children>
+        <!-- Card Container -->
+        <VBox alignment="CENTER" spacing="15" layoutX="75" layoutY="50" prefWidth="300"
+              style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25;">
+            
+            <effect>
+                <DropShadow radius="10" offsetX="0" offsetY="5" color="#00000055"/>
+            </effect>
+
+            <!-- Title -->
+            <Label text="Create Account" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+            <!-- Username -->
+            <TextField fx:id="usernameField" promptText="Username" prefWidth="250"
+                       style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;"/>
+
+            <!-- Email -->
+            <TextField fx:id="emailField" promptText="Email" prefWidth="250"
+                       style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;"/>
+
+            <!-- Password -->
+            <PasswordField fx:id="passwordField" promptText="Password" prefWidth="250"
+                           style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;"/>
+
+            <!-- Role Selection -->
+            <ComboBox fx:id="roleComboBox" prefWidth="250" promptText="Select Role"
+                      style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 6;"/>
+
+            <!-- Sign Up Button -->
+            <Button text="Sign Up" onAction="#handleSignup" prefWidth="200"
+                    style="-fx-background-color: linear-gradient(to right, #6a11cb, #2575fc); 
+                           -fx-text-fill: white; 
+                           -fx-font-weight: bold; 
+                           -fx-background-radius: 8; 
+                           -fx-padding: 8;"/>
+            
+            <!-- Login Link -->
+            <Hyperlink text="Already have an account? Login" onAction="#handleGoToLogin"
+                       style="-fx-text-fill: #2575fc; -fx-font-weight: bold;"/>
+
+            <!-- Message Label -->
+            <Label fx:id="messageLabel" textFill="red" wrapText="true" />
+
+        </VBox>
+    </children>
+</AnchorPane>

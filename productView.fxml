@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="productinventorysystem1.ProductController"
+            style="-fx-background-color: linear-gradient(to bottom right, #e3f2fd, #ffffff);"
+            prefWidth="800" prefHeight="600">
+
+    <VBox spacing="15" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10"
+          style="-fx-padding: 20 30 20 30; -fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3);">
+
+        <Label text="Product Inventory Management"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1565c0; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 1, 1);" />
+
+        <TableView fx:id="productTable" prefHeight="320" prefWidth="740"
+                   style="-fx-background-color: white; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0, 0, 1);">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="60" />
+                <TableColumn fx:id="nameCol" text="Product Name" prefWidth="180" />
+                <TableColumn fx:id="quantityCol" text="Quantity" prefWidth="120" />
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="120" />
+                <TableColumn fx:id="issueCol" text="Issue Date" prefWidth="130" />
+                <TableColumn fx:id="expiryCol" text="Expiry Date" prefWidth="130" />
+            </columns>
+        </TableView>
+
+        <HBox spacing="15" alignment="CENTER">
+            <TextField fx:id="nameField" promptText="Product Name" prefWidth="220"
+                       style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #90caf9; -fx-focus-color: #1976d2; -fx-padding: 10;" />
+            <TextField fx:id="quantityField" promptText="Quantity" prefWidth="120"
+                       style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #90caf9; -fx-focus-color: #1976d2; -fx-padding: 10;" />
+            <TextField fx:id="priceField" promptText="Price" prefWidth="120"
+                       style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #90caf9; -fx-focus-color: #1976d2; -fx-padding: 10;" />
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER">
+            <DatePicker fx:id="issueDatePicker" promptText="Issue Date" prefWidth="180"
+                        style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #90caf9; -fx-focus-color: #1976d2; -fx-padding: 8 10;" />
+            <DatePicker fx:id="expiryDatePicker" promptText="Expiry Date" prefWidth="180"
+                        style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #90caf9; -fx-focus-color: #1976d2; -fx-padding: 8 10;" />
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Add" onAction="#addProduct" prefWidth="100" prefHeight="35"
+                    style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;">
+                <style>
+                    .button:hover {
+                        -fx-background-color: #218838;
+                    }
+                </style>
+            </Button>
+            <Button text="Update" onAction="#updateProduct" prefWidth="100" prefHeight="35"
+                    style="-fx-background-color: #ffc107; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;">
+                <style>
+                    .button:hover {
+                        -fx-background-color: #e0a800;
+                    }
+                </style>
+            </Button>
+            <Button text="Delete" onAction="#deleteProduct" prefWidth="100" prefHeight="35"
+                    style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;">
+                <style>
+                    .button:hover {
+                        -fx-background-color: #c82333;
+                    }
+                </style>
+            </Button>
+            <Button text="Clear" onAction="#clearFields" prefWidth="100" prefHeight="35"
+                    style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;">
+                <style>
+                    .button:hover {
+                        -fx-background-color: #5a6268;
+                    }
+                </style>
+            </Button>
+            <Button text="Logout" onAction="#handleLogout" prefWidth="100" prefHeight="35"
+                    style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;">
+                <style>
+                    .button:hover {
+                        -fx-background-color: #0069d9;
+                    }
+                </style>
+            </Button>
+        </HBox>
+
+        <Button text="⬅ Go Back" onAction="#handleGoBack" prefWidth="120" prefHeight="35"
+                style="-fx-background-color: #17a2b8; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;">
+            <style>
+                .button:hover {
+                    -fx-background-color: #138496;
+                }
+            </style>
+        </Button>
+
+    </VBox>
+</AnchorPane>

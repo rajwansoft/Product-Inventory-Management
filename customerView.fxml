@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="productinventorysystem1.CustomerController"
+    style="-fx-background-color: linear-gradient(to bottom right, #d0e7ff, #f7fbff);">
+    
+    <VBox spacing="15" alignment="CENTER" prefWidth="800" prefHeight="600"
+          AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          style="-fx-padding: 20 40 20 40;">
+
+        <Label text="Available Products" 
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: linear-gradient(from 0% 0% to 100% 0%, #004d99, #3399ff);
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 2, 2);" />
+
+        <TableView fx:id="productTable" prefHeight="420" prefWidth="750" 
+                   style="-fx-background-color: white; -fx-border-radius: 8; -fx-background-radius: 8;
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 2);">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="50" />
+                <TableColumn fx:id="nameCol" text="Product Name" prefWidth="180" />
+                <TableColumn fx:id="quantityCol" text="Quantity" prefWidth="100" />
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="100" />
+                <TableColumn fx:id="issueCol" text="Issue Date" prefWidth="160" />
+                <TableColumn fx:id="expiryCol" text="Expiry Date" prefWidth="160" />
+            </columns>
+        </TableView>
+
+        <Button text="⬅ Go Back" onAction="#handleGoBack"
+                style="-fx-background-color: linear-gradient(to right, #3366ff, #00ccff);
+                       -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;
+                       -fx-padding: 8 30 8 30; -fx-background-radius: 30;
+                       -fx-cursor: hand;">
+            <VBox.margin>
+                <Insets top="10"/>
+            </VBox.margin>
+            <style>
+                /* Hover effect */
+                .button:hover {
+                    -fx-background-color: linear-gradient(to right, #00ccff, #3366ff);
+                    -fx-effect: dropshadow(gaussian, rgba(0, 204, 255, 0.6), 6, 0, 0, 0);
+                }
+            </style>
+        </Button>
+    </VBox>
+</AnchorPane>

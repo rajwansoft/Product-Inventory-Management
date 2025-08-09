@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="productinventorysystem1.LoginController"
+            prefWidth="400" prefHeight="400"
+            style="-fx-background-color: linear-gradient(to bottom right, #667eea, #764ba2);">
+
+    <children>
+        <VBox alignment="CENTER" spacing="20" layoutX="75" layoutY="60" prefWidth="250"
+              style="-fx-background-color: rgba(255, 255, 255, 0.85); 
+                     -fx-padding: 30 40 30 40; 
+                     -fx-background-radius: 20; 
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 4);">
+            
+            <Label text="Login" 
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+            <TextField fx:id="usernameField" promptText="Username" prefWidth="250" 
+                       style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-padding: 10;
+                              -fx-border-color: #667eea; -fx-focus-color: #764ba2;"/>
+            
+            <PasswordField fx:id="passwordField" promptText="Password" prefWidth="250"
+                           style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-padding: 10;
+                                  -fx-border-color: #667eea; -fx-focus-color: #764ba2;"/>
+
+            <Button text="Login" onAction="#handleLogin" prefWidth="200" prefHeight="40"
+                    style="-fx-background-color: linear-gradient(to right, #667eea, #764ba2);
+                           -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px;
+                           -fx-background-radius: 25; -fx-cursor: hand;">
+                <style>
+                    .button:hover {
+                        -fx-background-color: linear-gradient(to right, #764ba2, #667eea);
+                        -fx-effect: dropshadow(gaussian, rgba(118,75,162,0.7), 10, 0, 0, 0);
+                    }
+                </style>
+            </Button>
+
+            <Hyperlink text="Don't have an account? Sign Up" onAction="#handleGoToSignup" 
+                       style="-fx-text-fill: #764ba2; -fx-font-size: 14px;"/>
+            
+            <Label fx:id="messageLabel" textFill="red" style="-fx-font-weight: bold;"/>
+        </VBox>
+    </children>
+</AnchorPane>
